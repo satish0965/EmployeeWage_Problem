@@ -1,21 +1,30 @@
-﻿using EmployeeWageProblem;
-using System;
+﻿//Console.WriteLine("Welcome To Employee Wage Computation Problem");
+using EmployeeWageProblem;
 
 namespace EmployeeWageProblem
 {
-    public class program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to Employee Wage Computation Problem Part 3");
+            Console.WriteLine("1 For TATA Company Employee Wage");
+            Console.WriteLine("2 For MAHINDRA Company Employee Wage");
 
-            Console.WriteLine("Output of Total Employee wage for a Month  :");
-            //Creating Object of the class to call in Main method
-            //because method is non static
-
-            EmployeeWage emp = new EmployeeWage();
-            emp.ComputeEmpWage();
+            int problem = Convert.ToInt32(Console.ReadLine());
+            switch (problem)
+            {
+                case 1:
+                    EmployeeWageComputation employeewagecomputation = new EmployeeWageComputation();
+                    employeewagecomputation.AddCompany("TATA", 20, 8, 4, 100, 20);
+                    employeewagecomputation.CalculateEmpWage("TATA");
+                    break;
+                case 2:
+                    EmployeeWageComputation wagecomputation = new EmployeeWageComputation();
+                    wagecomputation.AddCompany("MAHINDRA", 30, 8, 4, 100, 20);
+                    wagecomputation.CalculateEmpWage("MAHINDRA");
+                    break;
+            }
         }
     }
 }
