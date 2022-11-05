@@ -13,8 +13,8 @@ namespace EmployeeWageProblem
             //so my class is static no need to instantiate/create object of class
             //directly call method
 
-            Console.WriteLine("Output to get Employee is Part time or Full time using Switch case :");
-            EmployeeWage.EmpWageSwitch();
+            Console.WriteLine("Output to get Daily Wage of Employee is Part time or Full time using Switch case :");
+            EmployeeWage.EmpWageSwitchForMonth();
         }
     }
 }

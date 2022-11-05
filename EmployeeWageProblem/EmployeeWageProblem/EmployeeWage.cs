@@ -14,37 +14,45 @@ namespace EmployeeWageProblem
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
         public const int Emp_Rate_Per_Hr = 20;
-        public static void EmpWageSwitch()
+        public const int Number_Of_Working_Days = 20;
+        public static void EmpWageSwitchForMonth()
         {
 
             //variables
             int empHrs = 0;
             int empWage = 0;
+            int totalEmpWage = 0;
 
-            //random function is to create random numbers
-            Random random = new Random();
-            //
-            int empCheck = random.Next(0, 2);
+            //Using for loop to iterate each day of working
 
-            //use Switch case statement to get employee wage
-
-            switch (empCheck)
+            for (int day = 1; day < Number_Of_Working_Days; day++)
             {
-                case IS_PART_TIME:
-                    empHrs = 4;
-                    break;
+                //random function is to create random numbers
+                Random random = new Random();
 
-                case IS_FULL_TIME:
-                    empHrs = 8;
-                    break;
+                int empCheck = random.Next(0, 3);      //range from 0 to 2
 
-                default:
-                    empHrs = 0;
-                    break;
+                //use Switch case statement to get employee wage
+                switch (empCheck)
+                {
+                    case IS_PART_TIME:
+                        empHrs = 4;
+                        break;
+
+                    case IS_FULL_TIME:
+                        empHrs = 8;
+                        break;
+
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * Emp_Rate_Per_Hr;
+
+                totalEmpWage += empWage;             //we can also use it totalEmpWage=totalEmpWage+empWage
+                Console.WriteLine("Emp Wage : " + " " + empWage);
             }
-            empWage = empHrs * Emp_Rate_Per_Hr;
-
-            Console.WriteLine("Emp Wage" + empWage);
+            Console.WriteLine("Total Emp Wage : " + " " + totalEmpWage);
         }
     }
 }
