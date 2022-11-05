@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeWageProblem;
+using System;
 
 namespace EmployeeWageProblem
 {
@@ -7,13 +8,14 @@ namespace EmployeeWageProblem
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to EmpWageComputation problem");
-
-            //so my class is static no need to instantiate/create object of class
-            //directly call method
+            Console.WriteLine("Welcome to Employee Wage Computation Problem Part 3");
 
             Console.WriteLine("Output of Total Employee wage for a Month  :");
-            EmployeeWage.EmpWageTotalWorkingDays();
+            //Creating Object of the class to call in Main method
+            //because method is non static
+
+            EmployeeWage emp = new EmployeeWage();
+            emp.ComputeEmpWage();
         }
     }
 }
