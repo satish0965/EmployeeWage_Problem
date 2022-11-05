@@ -8,10 +8,11 @@ namespace EmployeeWageProblem
 {
     public static class EmployeeWage
     {
-        public static void EmpDailyWage()
+        public static void EmpWagePartTime()
         {
             //define constants
-            int IS_FULL_TIME = 1;
+            int IS_PART_TIME = 1;
+            int IS_FULL_TIME = 2;
             int Emp_Rate_Per_Hr = 20;
 
             //variables
@@ -22,11 +23,15 @@ namespace EmployeeWageProblem
             Random random = new Random();
             //
             int empCheck = random.Next(0, 2);
-            //use if else statement to check if employee is present or absent
 
-            if (empCheck == IS_FULL_TIME)
+            //use if else if statement to get employee wage
+            if (empCheck == IS_PART_TIME)
             {
-                empHrs = 8;
+                empHrs = 4;
+            }
+            else if (empCheck == IS_PART_TIME)
+            {
+                empHrs = 4;
             }
             else
             {
