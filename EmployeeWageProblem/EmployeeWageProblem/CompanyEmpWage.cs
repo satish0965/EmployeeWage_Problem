@@ -8,12 +8,13 @@ namespace EmployeeWageProblem
 {
     class Company
     {
-        public float EmpWagePerHour = 20;
-        public int FullTime_WorkingHrs_PerDay = 8;
-        public int PartTime_WorkingHours_PerDay = 4;
-        public int MAX_WORKING_HRS = 100;
-        public int MAX_WORKING_DAYS = 20;
         public string CompanyName;
+        public float EmpWagePerHour;
+        public int FullTime_WorkingHrs_PerDay;
+        public int PartTime_WorkingHours_PerDay;
+        public int MAX_WORKING_HRS;
+        public int MAX_WORKING_DAYS;
+
 
         public Company(String CompanyName, int EmpWagePerhour, int FullTime_WorkingHrs_PerDay, int PartTime_WorkingHours_PerDay, int MAX_WORKING_HRS, int MAX_WORKING_DAYS)
         {
